@@ -1,101 +1,40 @@
 <!DOCTYPE html>
-<html lang="ja">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>グルメ検索</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-        }
-        select, button {
-            margin-bottom: 10px;
-        }
-        .restaurant {
-            border: 1px solid #ccc;
-            padding: 10px;
-            margin-bottom: 10px;
-        }
-    </style>
-    <script>
-        const restaurants = [
-            {
-                name: "バグダッドカフェ Bagdadcafe/モータウン MOTOWN",
-                access: "京王八王子駅を背にし右手に見えるローソンの隣のビル、ホテルザ・ビーの2階です。",
-                address: "東京都八王子市明神町４-6-12　ホテル・ザ・ビー八王子（旧八王子プラザホテル）2F",
-                budget: "3001～4000円",
-                catch: "【サプライズ演出有】 結婚パーティー受付中",
-                genre: "居酒屋",
-                open: "月～日、祝日、祝前日: 17:00～21:00 （料理L.O. 20:00 ドリンクL.O. 20:00）",
-                station_name: "京王八王子",
-                sub_genre: "ダイニングバー・バル"
-            },
-            {
-                name: "隠れ家バル Funny&Bouquet",
-                access: "ＪＲ八王子駅北口徒歩1分/京王八王子駅徒歩3分",
-                address: "東京都八王子市東町12-14",
-                budget: "2001～3000円",
-                catch: "2.5時間飲み放題付2000円~ 【★少人数様ソファー★】",
-                genre: "居酒屋",
-                open: "月～日、祝日、祝前日: 17:00～翌5:00 （料理L.O. 翌3:00 ドリンクL.O. 翌4:00）",
-                station_name: "八王子",
-                sub_genre: "ダイニングバー・バル"
-            }
-        ];
 
-        function search() {
-            const genre = document.getElementById("genre").value;
-            const resultsDiv = document.getElementById("results");
-            resultsDiv.innerHTML = "";
-            const filteredRestaurants = restaurants.filter(restaurant => restaurant.genre === genre);
+<title>グルメ情報</title>
 
-            filteredRestaurants.forEach(restaurant => {
-                const restaurantDiv = document.createElement("div");
-                restaurantDiv.className = "restaurant";
-                restaurantDiv.innerHTML = `
-                    <h2>${restaurant.name}</h2>
-                    <p><strong>アクセス:</strong> ${restaurant.access}</p>
-                    <p><strong>住所:</strong> ${restaurant.address}</p>
-                    <p><strong>予算:</strong> ${restaurant.budget}</p>
-                    <p><strong>キャッチコピー:</strong> ${restaurant.catch}</p>
-                    <p><strong>ジャンル:</strong> ${restaurant.genre}</p>
-                    <p><strong>営業時間:</strong> ${restaurant.open}</p>
-                    <p><strong>最寄駅:</strong> ${restaurant.station_name}</p>
-                    <p><strong>サブジャンル:</strong> ${restaurant.sub_genre}</p>
-                `;
-                resultsDiv.appendChild(restaurantDiv);
-            });
 
-            if (filteredRestaurants.length === 0) {
-                resultsDiv.innerHTML = "<p>該当する店舗がありません。</p>";
-            }
-        }
-    </script>
 </head>
 <body>
-    <h1>グルメ検索</h1>
-    <label for="genre">ジャンル:</label>
-    <select id="genre">
-        <option value="居酒屋">居酒屋</option>
-        <option value="ダイニングバー・バル">ダイニングバー・バル</option>
-        <option value="創作料理">創作料理</option>
-        <option value="和食">和食</option>
-        <option value="洋食">洋食</option>
-        <option value="イタリアン・フレンチ">イタリアン・フレンチ</option>
-        <option value="中華">中華</option>
-        <option value="焼肉・ホルモン">焼肉・ホルモン</option>
-        <option value="アジア・エスニック料理">アジア・エスニック料理</option>
-        <option value="各国料理">各国料理</option>
-        <option value="カラオケ・パーティ">カラオケ・パーティ</option>
-        <option value="バー・カクテル">バー・カクテル</option>
-        <option value="ラーメン">ラーメン</option>
-        <option value="カフェ・スイーツ">カフェ・スイーツ</option>
-        <option value="その他グルメ">その他グルメ</option>
-        <option value="お好み焼き・もんじゃ">お好み焼き・もんじゃ</option>
-        <option value="韓国料理">韓国料理</option>
-    </select>
-    <button onclick="search()">検索</button>
-    <div id="results"></div>
+    <form action="サイトURL" method="get">
+        <input type="search" name="search" placeholder="キーワードを入力">
+    </form>
+
+<h1>グルメ情報（検索結果は2件）</h1>
+
+    <h2>検索結果1件目</h2>
+    <p>名前: バグダッドカフェ Bagdadcafe/モータウン MOTOWN</p>
+    <p>アクセス: 京王八王子駅を背にし右手に見えるローソンの隣のビル、ホテルザ・ビーの2階です。</p>
+    <p>住所: 東京都八王子市明神町４-6-12　ホテル・ザ・ビー八王子（旧八王子プラザホテル）2F</p>
+    <p>予算: 3001～4000円</p>
+    <p>キャッチコピー: 【サプライズ演出有】 結婚パーティー受付中</p>
+    <p>ジャンル: 居酒屋</p>
+    <p>営業時間: 月～日、祝日、祝前日: 17:00～21:00 （料理L.O. 20:00 ドリンクL.O. 20:00）</p>
+    <p>最寄駅: 京王八王子</p>
+    <p>サブジャンル: ダイニングバー・バル</p>
+
+
+    <h2>検索結果2件目</h2>
+    <p>名前: 隠れ家バル Funny&Bouquet</p>
+    <p>アクセス: ＪＲ八王子駅北口徒歩1分/京王八王子駅徒歩3分</p>
+    <p>住所: 東京都八王子市東町12-14</p>
+    <p>予算: 2001～3000円</p>
+    <p>キャッチコピー: 2.5時間飲み放題付2000円~ 【★少人数様ソファー★】</p>
+    <p>ジャンル: 居酒屋</p>
+    <p>営業時間: 月～日、祝日、祝前日: 17:00～翌5:00 （料理L.O. 翌3:00 ドリンクL.O. 翌4:00）</p>
+    <p>最寄駅: 八王子</p>
+    <p>サブジャンル: ダイニングバー・バル</p>
+
 </body>
 </html>
