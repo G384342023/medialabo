@@ -10,14 +10,13 @@ p.info {
 h1 {
     font-size: 20pt;
     color: white;
-    text-shadow: 0px -1px 8px rgba(7, 24, 174, 0.761);
+    text-shadow: 0px 0px 8px rgba(7, 24, 174, 0.761);
 }
 
 h2 {
     color: #3f3faf;
-    background: linear-gradient(to bottom, white, #ffefaf);
-    border: solid 1px black;
-    padding: 5px;
+    background: linear-gradient(90deg, white, #ffefaf);
+    padding: 3px;
 }
 
 div#zentai {
@@ -34,5 +33,11 @@ div#zentai > div {
 }
 img.sign{
 	float: right;
-	
+
+}
+a:visited{
+	color: Green;
+}
+a:hover{
+	text-decoration: none;
 }
