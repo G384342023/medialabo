@@ -10,11 +10,10 @@ p.info {
 h1 {
     font-size: 20pt;
     color: white;
-    text-shadow: 2px 2px 4px navy;
+    text-shadow: 0px -1px 8px rgba(7, 24, 174, 0.761);
 }
 
 h2 {
-    font-family: cursive;
     color: #3f3faf;
     background: linear-gradient(to bottom, white, #ffefaf);
     border: solid 1px black;
@@ -32,4 +31,8 @@ div#zentai {
 div#zentai > div {
     background-color: #ffefaf;
     padding: 5px;
+}
+img.sign{
+	float: right;
+	
 }
