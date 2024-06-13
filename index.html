@@ -2,9 +2,23 @@
 <html>
   <head>
     <title>My test page</title>
+   
   </head>
   <body>
     <h1><p>「Webコンテンツ作成」の成果</p></h1>
+    <span onclick="obj=document.getElementById('open1').style; obj.display=
+    (obj.display=='none')?'block':'none';">
+    
+<a style="cursor:pointer;">▼ 本テーマについて</a>
+  </span>
+  <span id="open1" style="display: none; clear: both;">
+
+  <p>先行する情報工学の専門科目の基礎知識を応用して実践的な能力を修得することを目的とする。
+    到達目標は、手順書を読み、実験を行い、レポートやプレゼンテーションにより報告するという実験の一連の流れを実践できることと、HTML等を用いたWebページ作成ができることである。
+  </p>
+
+  </span>
+<!--// 折り畳まれ部分 -->
     <h2>本テーマについて</h2>
 
       <p>先行する情報工学の専門科目の基礎知識を応用して実践的な能力を修得することを目的とする。
@@ -22,8 +36,11 @@
         HTMLとはWEBサイトを制作する際に、コンピュータへ構成指示を出し、表示したい文章などの情報を形作るマークアップ言語の一つである。</p>
       <p>演習の成果: <a href="https://g384342023.github.io/medialabo/practice-html/elements.html">演習1-4:HTMLの様々な要素</a></p>
       <h3>第2回 CSS による Web ページの装飾</h3>
-      <p>cssを用いたwebページの制作方法を学んだ。
-        cssとはWebサイトやページの見た目を設定するプログラミング言語である。</p>
+      <p>CSSを用いたwebページの制作方法を学んだ。
+        CSS（Cascading Style Sheets）は、HTML文書の見た目を制御するためのスタイルシート言語だ。
+        レイアウト、色、フォントなどのデザイン要素を指定し、ウェブページの外観を一貫して整えるために使用される。
+      </p>
+      <p>演習の成果: <a href="https://g384342023.github.io/medialabo/practice-css/browser-intro.html">演習2-3:Webブラウザ説明ページの説明</a></p>
     <h3>第3回 JavaScript の基本</h3>
     <h3>第4回 DOM と JavaScript</h3>
     <h3>第5回 イベント処理</h3>
