@@ -200,5 +200,16 @@ let data = {
 };
 
 /////////// 課題3-2 ここからプログラムを書こう
-console.log(data.results.shop[0]);
+for (let i = 0; i < 2; i++) {
+  console.log(data.results.shop[i].name);
+  console.log(data.results.shop[i].access);
+  console.log(data.results.shop[i].address);
+  console.log(data.results.shop[i].budget.name);
+  console.log(data.results.shop[i].catch);
+  console.log(data.results.shop[i].genre.name);
+  console.log(data.results.shop[i].open);
+  console.log(data.results.shop[i].station_name);
+  console.log("サブジャンル" + data.results.shop[i].sub_genre.name);
+  console.log();
+}
 
