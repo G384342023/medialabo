@@ -15,37 +15,41 @@ b.addEventListener('click',hantei);
 function hantei() {
  // 将来ここでは 4 ではなくテキストボックスに指定された数値を yoso に代入する
  let i=document.querySelector('input[name="sitei"]');
+ 
  let mae=i.value;
-let yoso = Number(mae);
+ let yoso = Number(mae);
 
 // 課題3-1: 正解判定する
 // kotae と yoso が一致するかどうか調べて結果を出力
 // 課題3-1における出力先はコンソール
-kaisu=kaisu+1;
-kiroku=kiroku+1;
-let p1=document.querySelector('span#kaisu');
-p1.textContent=kaisu;
-let p2=document.querySelector('span#answer');
-p2.textContent=yoso; 
-let p3=document.querySelector('p#result');
-if(kiroku<3){
-  if(kotae===yoso){
-    text=("正解です。おめでとう！");
-    kiroku=3;
-  }else if(kotae<yoso){
-    text=("まちがい。答えはもっと小さいですよ");
-  }else{
-    text=("まちがい。答えはもっと大きいですよ");
-  }
-}else if(kiroku===3){
-  if(kotae===yoso){
-    text=("正解です。おめでとう！");
-  }else{
-    text=("まちがい。残念でした答えは"+kotae+"です。");
-  }
-}else if(kiroku>3){
-    text=("答えは"+kotae+"でした。すでにゲームは終わっています");
-}
-p3.textContent=text;
+ kaisu += 1;
+ kiroku += 1;
+
+ let p1=document.querySelector('span#kaisu');
+ p1.textContent=kaisu;
+
+ let p2=document.querySelector('span#answer');
+ p2.textContent=yoso; 
+
+ let p3=document.querySelector('p#result');
+ if(kiroku<4){
+   if(kotae===yoso){
+     text=("正解です。おめでとう！");
+     kiroku=3;
+   }else if(kotae<yoso){
+     text=("まちがい。答えはもっと小さいですよ");
+   }else{
+     text=("まちがい。答えはもっと大きいですよ");
+   }
+ }else if(kiroku===4){
+   if(kotae===yoso){
+     text=("正解です。おめでとう！");
+   }else{
+     text=("まちがい。残念でした答えは"+kotae+"です。");
+   }
+ }else{
+     text=("答えは"+kotae+"でした。すでにゲームは終わっています");
+ }
+ p3.textContent=text;
 }
 
