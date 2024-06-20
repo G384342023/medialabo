@@ -201,15 +201,15 @@ let data = {
 
 /////////// 課題3-2 ここからプログラムを書こう
 for (let i = 0; i < 2; i++) {
-  console.log(data.results.shop[i].name);
-  console.log(data.results.shop[i].access);
-  console.log(data.results.shop[i].address);
-  console.log(data.results.shop[i].budget.name);
-  console.log(data.results.shop[i].catch);
-  console.log(data.results.shop[i].genre.name);
-  console.log(data.results.shop[i].open);
-  console.log(data.results.shop[i].station_name);
-  console.log("サブジャンル" + data.results.shop[i].sub_genre.name);
+  console.log('名前: ' + data.results.shop[i].name);
+  console.log('アクセス: ' + data.results.shop[i].access);
+  console.log('住所: ' + data.results.shop[i].address);
+  console.log('予算: ' + data.results.shop[i].budget.name);
+  console.log('キャッチコピー: ' + data.results.shop[i].catch);
+  console.log('ジャンル: ' + data.results.shop[i].genre.name);
+  console.log('営業時間: ' + data.results.shop[i].open);
+  console.log('最寄り駅: ' + data.results.shop[i].station_name);
+  console.log("サブジャンル: " + data.results.shop[i].sub_genre.name);
   console.log();
 }
 
