@@ -1,0 +1,70 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+h1 {
+    color: #2c3e50;
+    text-align: center;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 10px;
+}
+
+h2 {
+    color: #2980b9;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+h2:hover {
+    color: #3498db;
+}
+
+h3 {
+    color: #16a085;
+}
+
+p {
+    margin-bottom: 15px;
+}
+
+a {
+    color: #e74c3c;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+span[id^="open"] {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 15px;
+    display: block;
+}
+
+/* アコーディオンのスタイル */
+span[onclick] {
+    display: block;
+    margin-bottom: 10px;
+}
+
+span[onclick] h2 {
+    margin: 0;
+    padding: 10px;
+    background-color: #ecf0f1;
+    border-radius: 5px;
+}
+
+span[onclick] h2::before {
+    content: '▼ ';
+    font-size: 0.8em;
+}
