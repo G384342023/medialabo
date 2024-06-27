@@ -15,12 +15,48 @@ let data = [
 
 // 練習4-2 メッセージ追加プログラム
 
+let ex42 = document.querySelector('h2#ex42');
+let p = document.createElement('p');
+p.textContent = '写真表と緯度経度のページです';
+p.style.textEmphasis = 'sesame green';
+ex42.insertAdjacentElement('afterend', p);
+
 
 // 練習4-3 写真表作成プログラム
 
+let phototable = document.querySelector('div#phototable');
+
+let photoNames = ['taro.png', 'jiro.png', 'hanako.png'];
+
+for (let name of photoNames) {
+
+    let img = document.createElement('img');
+    
+    img.src = name;
+    
+    let p = document.createElement('p');
+
+    p.appendChild(img);
+    
+    phototable.appendChild(p);
+}
 
 // 練習4-4 箇条書き削除プログラム
+let w = document.querySelector('ul#location');
 
+w.innerHTML = '';
 
 // 練習4-5 箇条書き追加プログラム
 
+let ul = document.querySelector('ul#location');
+
+
+for (let city of data) {
+	
+	let li = document.createElement('li');
+	
+	ul.insertAdjacentElement('beforeend', li);
+
+    li.textContent = `${city.name}: 緯度 ${city.lat}, 経度 ${city.lng}`;
+
+}
