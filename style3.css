@@ -37,6 +37,10 @@ a {
     color: #e74c3c;
     text-decoration: none;
 }
+ac {
+    color: #2980b9;
+    text-decoration: underline;
+}
 
 a:hover {
     text-decoration: underline;
@@ -51,7 +55,6 @@ span[id^="open"] {
     display: block;
 }
 
-/* アコーディオンのスタイル */
 span[onclick] {
     display: block;
     margin-bottom: 10px;
