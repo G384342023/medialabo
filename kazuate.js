@@ -6,6 +6,12 @@ console.log('答え（デバッグ用）: ' + kotae);
 let kaisu = 0;
 let kiroku = 0;
 
+let kakak = document.querySelector('span#kaisu');
+
+let p = document.createElement('p');
+
+p.
+
 hantei();
 hantei();
 hantei();
