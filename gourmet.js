@@ -222,8 +222,9 @@ for (let i = 0; i < 2; i++) {
   shopDiv.classList.add('shop');
 
   shopDiv.innerHTML = `
-      <h2>${shop.name}</h2>
+      <h2>検索結果${i+1}件目</h2>
       <div class="shop-details">
+        <p>名前: ${shop.name}</p>
         <p>アクセス: ${shop.access}</p>
         <p>住所: ${shop.address}</p>
         <p>予算: ${shop.budget.name}</p>
