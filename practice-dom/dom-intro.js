@@ -15,6 +15,8 @@ for (let p3 of ps3) {								// 検索結果のp要素それぞれに対して�
 	console.log(p3.textContent);					// 要素のテキストを表示
 }
 
+
+
 //// テキストの変更
 let p4 = document.querySelector('p#yacht');			// p#yacht 要素を検索
 p4.textContent = '夜更かししないでね';				// 要素のテキストを設定

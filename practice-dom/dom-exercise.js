@@ -55,7 +55,7 @@ for (let city of data) {
 	
 	let li = document.createElement('li');
 	
-	ul.insertAdjacentElement('beforeend', li);
+	ul.insertAdjacentElement('beforeendletcre', li);
 
     li.textContent = `${city.name}: 緯度 ${city.lat}, 経度 ${city.lng}`;
 

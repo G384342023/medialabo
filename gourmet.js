@@ -213,3 +213,28 @@ for (let i = 0; i < 2; i++) {
   console.log();
 }
 
+let resultDiv = document.getElementById('result');
+
+for (let i = 0; i < 2; i++) {
+  let shop = data.results.shop[i];
+
+  let shopDiv = document.createElement('div');
+  shopDiv.classList.add('shop');
+
+  shopDiv.innerHTML = `
+      <h2>${shop.name}</h2>
+      <div class="shop-details">
+        <p>アクセス: ${shop.access}</p>
+        <p>住所: ${shop.address}</p>
+        <p>予算: ${shop.budget.name}</p>
+        <p>キャッチコピー: ${shop.catch}</p>
+        <p>ジャンル: ${shop.genre.name}</p>
+        <p>営業時間: ${shop.open}</p>
+        <p>最寄り駅: ${shop.station_name}</p>
+        <p>サブジャンル: ${shop.sub_genre.name}</p>
+      </div>
+    `;
+
+  resultDiv.appendChild(shopDiv);
+}
+
