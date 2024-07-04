@@ -215,8 +215,8 @@ for (let i = 0; i < 2; i++) {
 
 let resultDiv = document.getElementById('result');
 
-for (let i = 0; i < 2; i++) {
-  let shop = data.results.shop[i];
+for (let j = 0; j < 2; j++) {
+  let shop = data.results.shop[j];
 
   let shopDiv = document.createElement('div');
   shopDiv.classList.add('shop');
