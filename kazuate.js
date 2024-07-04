@@ -6,12 +6,16 @@ console.log('答え（デバッグ用）: ' + kotae);
 let kaisu = 0;
 
 // 予想を1回実行する
-hantei();
+let b = document.querySelector('button#print');
+b.addEventListener('click', hantei);
+
 
 // ボタンを押した後の処理をする関数 hantei() の定義
 function hantei() {
   // 将来ここでは 4 ではなくテキストボックスに指定された数値を yoso に代入する
-  let yoso = 4;
+  let i = document.querySelector('input[name="seisu"]');
+  let a = Number(i.value);
+  let yoso = a; 
   
   kaisu++;  // 回答回数を1増やす
   
