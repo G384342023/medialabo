@@ -235,7 +235,15 @@ for (let i = 0; i < 2; i++) {
         <p>サブジャンル: ${shop.sub_genre.name}</p>
       </div>
     `;
-
-  resultDiv.appendChild(shopDiv);
-}
-
+    
+    let i = document.getElementById('search-button');
+    i.addEventListener('click', log);
+    function log(){
+      let ge = document.getElementById('genre-select');
+      let genre = ge.value;  
+      console.log('選択されたジャンル: ' + genre);
+    }
+    
+    
+ 
+}    
