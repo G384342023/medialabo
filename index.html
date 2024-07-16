@@ -42,23 +42,42 @@
 
   </span>
 
-  <span onclick="obj=document.getElementById('open3').style; obj.display=
-    (obj.display=='none')?'block':'none';">
-
+  <span onclick="obj=document.getElementById('open3').style; obj.display=(obj.display=='none')?'block':'none';">
     <ac style="cursor:pointer;">
-      <h2>数当てゲーム</h2>
+        <h2>数当てゲーム</h2>
     </ac>
-  </span>
-  <span id="open3" style="display: none; clear: both;">
+</span>
+<span id="open3" style="display: none; clear: both;">
     <p>
-      <!--数当て-->
-      
-    </p>
-    <p>
-      数当てゲームのページ: <a href="https://g384342023.github.io/medialabo/kazuate.html">kazuate.html</a>
-    </p>
+        <!--数当て-->
+        <h3>ゲームの概要</h3>
+        <ul>
+            <li>1から10までのランダムな数字が選ばれます。</li>
+            <li>プレイヤーは3回まで予想できます。</li>
+            <li>各予想後にフィードバックが表示されます。</li>
+        </ul>
 
-  </span>
+        <h3>ゲームの要素</h3>
+        <ul>
+            <li>数字入力フィールド</li>
+            <li>回答送信ボタン</li>
+            <li>結果表示エリア</li>
+        </ul>
+
+        <h3>ゲームのロジック</h3>
+        <p><code>hantei</code>関数が以下の処理を行います：</p>
+        <ol>
+            <li>プレイヤーの入力と正解を比較</li>
+            <li>適切なフィードバックメッセージを生成</li>
+            <li>残り試行回数の管理</li>
+        </ol>
+
+        <p>HTMLの要素がリアルタイムで更新され、プレイヤーに直感的なゲーム体験を提供します。</p>
+    </p>
+    <p>
+        数当てゲームのページ: <a href="https://g384342023.github.io/medialabo/kazuate.html">kazuate.html</a>
+    </p>
+</span>
   <span onclick="obj=document.getElementById('open4').style; obj.display=
     (obj.display=='none')?'block':'none';">
 
@@ -123,9 +142,15 @@
     <h3>第5回 イベント処理</h3>
     <p>
       <!--学習事項-->
+      JavaScript のイベント処理は、ウェブアプリケーションの対話性を高める重要な機能である。
+      主にaddEventListenerメソッドを使用し、要素にイベントリスナーを追加する。
+      これにより、クリックやキー入力などのユーザーアクションに対して特定の処理を実行できる。
+      イベントオブジェクトを活用することで、発生したイベントの詳細情報にアクセスできる。例えば、クリックされた要素や入力されたキーコードなどを取得できる。
+      イベントの伝播制御も重要な概念である。キャプチャリングフェーズとバブリングフェーズを理解し、必要に応じてstopPropagationメソッドを使用することで、イベントの伝播を制御できる。
+      非同期処理との組み合わせにより、ユーザー体験を損なうことなく複雑な処理を実行することも可能である。
     </p>
     <p>
-      演習の成果: <a href=""></a>
+      演習の成果: <a href="https://g384342023.github.io/medialabo/practice-event/event-list.html">練習5-3: イベントを選択する</a>
     </p>
     
   </span>

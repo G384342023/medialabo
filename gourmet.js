@@ -236,11 +236,14 @@ for (let j = 0; j < 2; j++) {
       </div>
     `;
     
-    let i = document.getElementById('search-button');
+    let i = document.querySelector('search-button');
     i.addEventListener('click', log);
     function log(){
-      let ge = document.getElementById('genre-select');
-      let genre = ge.value;  
+      let ge = document.querySelector('select#gurume');
+      let genre = ge.selectedIndex;
+      
+      let ss = ge.querySelectorAll('option');
+      let s = s.item(ss);
       console.log('選択されたジャンル: ' + genre);
     }
     
