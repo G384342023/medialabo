@@ -200,7 +200,7 @@ let data = {
 };
 
 /////////// 課題3-2 ここからプログラムを書こう
-for (let i = 0; i < 2; i++) {
+for (let i = 0; i < data.length; i++) {
   console.log('名前: ' + data.results.shop[i].name);
   console.log('アクセス: ' + data.results.shop[i].access);
   console.log('住所: ' + data.results.shop[i].address);
@@ -213,40 +213,73 @@ for (let i = 0; i < 2; i++) {
   console.log();
 }
 
-let resultDiv = document.getElementById('result');
+let resultDiv = document.getElementById('result'); 
 
-for (let j = 0; j < 2; j++) {
-  let shop = data.results.shop[j];
 
-  let shopDiv = document.createElement('div');
-  shopDiv.classList.add('shop');
-
-  shopDiv.innerHTML = `
-      <h2>検索結果${j+1}件目</h2>
-      <div class="shop-details">
-        <p>名前: ${shop.name}</p>
-        <p>アクセス: ${shop.access}</p>
-        <p>住所: ${shop.address}</p>
-        <p>予算: ${shop.budget.name}</p>
-        <p>キャッチコピー: ${shop.catch}</p>
-        <p>ジャンル: ${shop.genre.name}</p>
-        <p>営業時間: ${shop.open}</p>
-        <p>最寄り駅: ${shop.station_name}</p>
-        <p>サブジャンル: ${shop.sub_genre.name}</p>
-      </div>
-    `;
-    
-    let i = document.querySelector('search-button');
-    i.addEventListener('click', log);
-    function log(){
-      let ge = document.querySelector('select#gurume');
-      let genre = ge.selectedIndex;
-      
-      let ss = ge.querySelectorAll('option');
-      let s = s.item(ss);
-      console.log('選択されたジャンル: ' + genre);
-    }
-    
-    
+let b = document.querySelector('#print');
+b.addEventListener('click', print);
  
-}    
+function print() {
+  let resultDiv = document.querySelector('div#result');
+  resultDiv.innerHTML = '';
+ 
+  let g = document.querySelector('select#genre');
+  let idx = g.selectedIndex;
+  let os = g.querySelectorAll('option');
+  let o = os.item(idx);
+ 
+  console.log('検索キー: ' + o.textContent);
+}
+
+function showResult(resp) {
+  let data = resp.data;
+ 
+ 
+ 
+  let div = document.querySelector('div#result');
+ 
+  let resultCount = data.results.shop.length;
+  let resultCountMessage = document.createElement('h3');
+  resultCountMessage.textContent = `検索結果: ${resultCount}件ヒットしました。`;
+  div.appendChild(resultCountMessage);
+ 
+  data.results.shop.forEach((shop, index) => {
+    let h = document.createElement('h3');
+    h.textContent = `検索結果${index + 1}件目`;
+    div.appendChild(h);
+ 
+    let ul = document.createElement('ul');
+ 
+    let li1 = document.createElement('li');
+    let li2 = document.createElement('li');
+    let li3 = document.createElement('li');
+    let li4 = document.createElement('li');
+    let li5 = document.createElement('li');
+    let li6 = document.createElement('li');
+    let li7 = document.createElement('li');
+    let li8 = document.createElement('li');
+    let li9 = document.createElement('li');
+ 
+    li1.textContent = "名前: " + shop.name;
+    li2.textContent = "アクセス: " + shop.access;
+    li3.textContent = "住所: " + shop.address;
+    li4.textContent = "予算: " + shop.budget.name;
+    li5.textContent = "キャッチコピー: " + shop.catch;
+    li6.textContent = "ジャンル: " + shop.genre.name;
+    li7.textContent = "営業時間: " + shop.open;
+    li8.textContent = "最寄駅: " + shop.station_name;
+    li9.textContent = "サブジャンル: " + (shop.sub_genre ? shop.sub_genre.name : 'なし');
+ 
+    ul.appendChild(li1);
+    ul.appendChild(li2);
+    ul.appendChild(li3);
+    ul.appendChild(li4);
+    ul.appendChild(li5);
+    ul.appendChild(li6);
+    ul.appendChild(li7);
+    ul.appendChild(li8);
+    ul.appendChild(li9);
+ 
+    div.appendChild(ul);
+  });
+}
