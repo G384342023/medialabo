@@ -270,6 +270,16 @@ function showResult(resp) {
     let li8 = document.createElement('li');
     let li9 = document.createElement('li');
  
+    ul.appendChild(li2);
+    ul.appendChild(li3);
+    ul.appendChild(li4);
+    ul.appendChild(li5);
+    ul.appendChild(li6);
+    ul.appendChild(li7);
+    ul.appendChild(li8);
+    ul.appendChild(li9);
+ 
+    div.appendChild(ul);
     li1.textContent = "名前: " + shop.name;
     li2.textContent = "アクセス: " + shop.access;
     li3.textContent = "住所: " + shop.address;
@@ -281,16 +291,6 @@ function showResult(resp) {
     li9.textContent = "サブジャンル: " + (shop.sub_genre ? shop.sub_genre.name : 'なし');
  
     ul.appendChild(li1);
-    ul.appendChild(li2);
-    ul.appendChild(li3);
-    ul.appendChild(li4);
-    ul.appendChild(li5);
-    ul.appendChild(li6);
-    ul.appendChild(li7);
-    ul.appendChild(li8);
-    ul.appendChild(li9);
- 
-    div.appendChild(ul);
   });
 }
  
