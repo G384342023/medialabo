@@ -93,7 +93,7 @@ button:hover {
   }
   
   button {
-    background-color: #4CAF50;
+    background-color: #3498db;
     color: white;
     border: none;
     cursor: pointer;
@@ -101,7 +101,7 @@ button:hover {
   }
   
   button:hover {
-    background-color: #45a049;
+    background-color: #3498db;
   }
   
   #result {

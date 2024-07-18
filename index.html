@@ -37,9 +37,42 @@
 
     <p>
       <!--プロジェクト課題-->
+    <h3>Webページの概要</h3>
+    <ul>
+      <li>検索キー内から一つを選択する。</li>
+      <li>検索ボタンをクリックする。</li>
+      <li>選択されたジャンルに応じた結果が出力される。</li>
+      <li>コンソール内でAJAX通信の処理が行われる</li>
+    </ul>
 
 
+    <h3>Webページの要素</h3>
+    <ul>
+      <li>プルダウンメニュー</li>
+      <li>検索ボタン</li>
+      <li>結果表示エリア</li>
+    </ul>
 
+    <h3>Webページのロジック</h3>
+    <p>print関数が以下の処理を行う。</p>
+    <ol>
+      <li>ユーザーが選択したジャンルの情報を取得</li>
+      <li>選択されたジャンルに基づいてAPIのURLを構築</li>
+      <li>APIからデータを取得し、showResult関数を呼び出す</li>
+    </ol>
+    <p>showResult関数が以下の処理を行う。</p>
+    <ol>
+      <li>APIからのレスポンスデータを解析</li>
+      <li>検索結果の件数を表示</li>
+      <li>各店舗の情報を整形してHTML要素として追加</li>
+    </ol>
+    <p>showError関数とfinish関数が以下の処理を行う。</p>
+    <ol>
+      <li>showError: エラーをコンソールに表示</li>
+      <li>finish: 検索終了メッセージをコンソールに表示</li>
+    </ol>
+
+    </p>
     </p>
     <p>
       プロジェクト課題のページ: <a href="https://g384342023.github.io/medialabo/project.html">project.html</a>
