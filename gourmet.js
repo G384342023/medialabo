@@ -254,11 +254,12 @@ function showResult(resp) {
   div.appendChild(resultCountMessage);
  
   data.results.shop.forEach((shop, index) => {
-    let h = document.createElement('h3');
+    let h = document.createElement('h2');
     h.textContent = `検索結果${index + 1}件目`;
     div.appendChild(h);
  
     let ul = document.createElement('ul');
+    
  
     let li1 = document.createElement('li');
     let li2 = document.createElement('li');
