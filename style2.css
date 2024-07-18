@@ -14,7 +14,81 @@ body {
   
   select, button {
     margin: 10px 0;
-    padding: 5px;
+    padding: 5px;body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        color: #333;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #f4f4f4;
+    }
+    
+    h2 {
+        color: #2980b9;
+        border-bottom: 2px solid #3498db;
+        padding-bottom: 10px;
+    }
+    
+    select, button {
+        margin: 10px 0;
+        padding: 5px;
+        font-size: 16px;
+    }
+    
+    button {
+        background-color: #2c3e50;
+        color: white;
+        border: none;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        border-radius: 5px;
+        padding: 10px 15px;
+    }
+    
+    button:hover {
+        background-color: #3498db;
+    }
+    
+    #result {
+        background-color: white;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    
+    #result h3 {
+        color: #16a085;
+        margin-top: 20px;
+        cursor: pointer;
+        transition: color 0.3s ease;
+    }
+    
+    #result h3:hover {
+        color: #1abc9c;
+    }
+    
+    #result ul {
+        list-style-type: none;
+        padding: 0;
+    }
+    
+    #result li {
+        margin-bottom: 10px;
+        padding: 10px;
+        background-color: #ecf0f1;
+        border-radius: 5px;
+    }
+    
+    @media (max-width: 600px) {
+        body {
+            padding: 10px;
+        }
+        
+        select, button {
+            width: 100%;
+        }
+    }
     font-size: 16px;
   }
   
