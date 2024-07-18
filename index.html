@@ -49,43 +49,70 @@
 
   <span onclick="obj=document.getElementById('open3').style; obj.display=(obj.display=='none')?'block':'none';">
     <ac style="cursor:pointer;">
-        <h2>数当てゲーム</h2>
+      <h2>数当てゲーム</h2>
     </ac>
-</span>
-<span id="open3" style="display: none; clear: both;">
+  </span>
+  <span id="open3" style="display: none; clear: both;">
     <p>
-        <!--数当て-->
-        <h3>ゲームの概要</h3>
+      <!--数当て-->
+    <h3>ゲームの概要</h3>
+    <ul>
+      <li>1から10までのランダムな数字が選ばれる。</li>
+      <li>プレイヤーは3回まで予想できる。</li>
+      <li>各予想後にフィードバックが表示される。</li>
+    </ul>
+
+    <h3>数当てゲームの出力パターン</h3>
+
+    <ol>
+      <li>正解の場合：
         <ul>
-            <li>1から10までのランダムな数字が選ばれる。</li>
-            <li>プレイヤーは3回まで予想できる。</li>
-            <li>各予想後にフィードバックが表示される。</li>
-            <li>もし3回以上予想された場合、出力結果が変更される。</li>
+          <li>"正解です．おめでとう!"</li>
         </ul>
+      </li>
 
-        <h3>ゲームの要素</h3>
+      <li>不正解で、試行回数が1回目または2回目の場合：
         <ul>
-            <li>数字入力ボックス</li>
-            <li>回答送信ボタン</li>
-            <li>結果表示エリア</li>
+          <li>予想が小さすぎる場合："まちがい．答えはもっと大きいですよ"</li>
+          <li>予想が大きすぎる場合： "まちがい．答えはもっと小さいですよ"</li>
         </ul>
+      </li>
 
-        <h3>ゲームのロジック</h3>
-        <p>hantei関数が以下の処理を行う。</p>
-        <ol>
-            <li>プレイヤーの入力と正解を比較</li>
-            <li>適切なフィードバックメッセージを生成</li>
-            <li>残り試行回数の管理</li>
-        </ol>
+      <li>不正解で、試行回数が3回目の場合：
+        <ul>
+          <li>"まちがい．残念でした答えは 000 です．"</li>
+        </ul>
+      </li>
 
-        <p>HTMLの要素がリアルタイムで更新され、プレイヤーに直感的なゲーム体験を提供する。</p>
-        <h3>制作した感想</h3>
-        <p></p>
+      <li>試行回数が3回を超えた場合：
+        <ul>
+          <li>答えは 000 でした．すでにゲームは終わっています</li>
+          <li>（注：000は実際の答えの数字に置き換わります）</li>
+        </ul>
+      </li>
+    </ol>
+
+    <h3>ゲームの要素</h3>
+    <ul>
+      <li>数字入力ボックス</li>
+      <li>回答送信ボタン</li>
+      <li>結果表示エリア</li>
+    </ul>
+
+    <h3>ゲームのロジック</h3>
+    <p>hantei関数が以下の処理を行う。</p>
+    <ol>
+      <li>プレイヤーの入力と正解を比較</li>
+      <li>適切なフィードバックメッセージを生成</li>
+      <li>残り試行回数の管理</li>
+    </ol>
+
+    <p>HTMLの要素がリアルタイムで更新され、プレイヤーに直感的なゲーム体験ができる。</p>
     </p>
     <p>
-        数当てゲームのページ: <a href="https://g384342023.github.io/medialabo/kazuate.html">kazuate.html</a>
+      数当てゲームのページ: <a href="https://g384342023.github.io/medialabo/kazuate.html">kazuate.html</a>
     </p>
-</span>
+  </span>
   <span onclick="obj=document.getElementById('open4').style; obj.display=
     (obj.display=='none')?'block':'none';">
 
@@ -97,7 +124,7 @@
 
 
     <h3>第1回 WWW と HTML</h3>
-    <p> 
+    <p>
       Web通信におけるプロトコルは約束事であり、一般的にはhttpsが利用される。
       サーバはWebページの配布元を指し、パスはサーバ上のファイル配置場所を示す。
       通信はブラウザからのページ要求で発生し、クライアントサーバシステムに基づいて行われる。
@@ -106,7 +133,7 @@
       HTMLとはWEBサイトを制作する際に、コンピュータへ構成指示を出し、表示したい文章などの情報を形作るマークアップ言語の一つである。</p>
     <p>
       演習の成果: <a href="https://g384342023.github.io/medialabo/practice-html/elements.html">演習1-4: HTMLの様々な要素</a>
-    </p> 
+    </p>
 
     <p>
     <h3>第2回 CSS による Web ページの装飾</h3>
@@ -118,12 +145,13 @@
     <p>
       演習の成果: <a href="https://g384342023.github.io/medialabo/practice-css/browser-intro.html">演習2-3: Webブラウザ説明ページの説明</a>
     </p>
-  
+
     <h3>第3回 JavaScript の基本</h3>
     <p>
       JavaScriptは、Webページ上で複雑な機能を実現するためのプログラミング言語だ。
       ページを開いた直後やボタンを押したときに実行され、ページの自動更新やアニメーションなど動きのあるページを作成する。
-      ブラウザAPIとして、DOM API、Geolocation API、CanvasとWebGL、WebRTCなどがあり、これらによりHTML要素の操作や現在位置の取得、2D・3Dグラフィックスの描画、リアルタイム通信が可能である。
+      ブラウザAPIとして、DOM API、Geolocation
+      API、CanvasとWebGL、WebRTCなどがあり、これらによりHTML要素の操作や現在位置の取得、2D・3Dグラフィックスの描画、リアルタイム通信が可能である。
       また、Twitter APIやGoogle Map APIなどのサードパーティAPIも利用できる。
       JavaScriptはインタプリタ言語であり、プログラムは1行ずつ読み取り実行している。
       このため、コンパイルの手間がなく、手軽に実行とデバッグが可能だ。
@@ -160,7 +188,7 @@
     <p>
       演習の成果: <a href="https://g384342023.github.io/medialabo/practice-event/event-list.html">練習5-3: イベントを選択する</a>
     </p>
-    
+
   </span>
 
 </body>
