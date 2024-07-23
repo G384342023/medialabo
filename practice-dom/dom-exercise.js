@@ -48,15 +48,12 @@ w.innerHTML = '';
 
 // 練習4-5 箇条書き追加プログラム
 
-let ul = document.querySelector('ul#location');
+let ul = document.querySelector("ul#location");
 
+for (let n of data){
 
-for (let city of data) {
-	
-	let li = document.createElement('li');
-	
-	ul.insertAdjacentElement('beforeendletcre', li);
-
-    li.textContent = `${city.name}: 緯度 ${city.lat}, 経度 ${city.lng}`;
-
+	let name = document.createElement("li");
+	name.textContent = n.name +" ... 緯度: "+n.lat+", 経度: " + n.lng;
+	ul.insertAdjacentElement("beforeend",name);
+  
 }
